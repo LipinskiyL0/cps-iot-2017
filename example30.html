@@ -156,14 +156,14 @@ var final_trs;
         // *********************************************************************
         // STOP
         // *********************************************************************    
-        if(interim_transcript == "stop" || interim_transcript == " stop" || interim_transcript == "break" || interim_transcript == " break" || interim_transcript == "house" || interim_transcript == "how's" || interim_transcript == " how's" || interim_transcript == " house" || interim_transcript == "Red Sox" || interim_transcript == " Red Sox")
+        if(interim_transcript == "стой" || interim_transcript == " стой" || interim_transcript == "break" || interim_transcript == " break" || interim_transcript == "house" || interim_transcript == "how's" || interim_transcript == " how's" || interim_transcript == " house" || interim_transcript == "Red Sox" || interim_transcript == " Red Sox")
         {
             socket.emit("center", 1);
         };
         // *********************************************************************
         // Go
         // *********************************************************************
-        if(interim_transcript == "go" || interim_transcript == " go" || interim_transcript == "forward" || interim_transcript == " forward" || interim_transcript == "start" || interim_transcript == " start") // ker napravimo premor med govorom moramo upoštevati tudi presledek+1, t.j. " 1"
+        if(interim_transcript == "вперед" || interim_transcript == " вперед" || interim_transcript == "forward" || interim_transcript == " forward" || interim_transcript == "start" || interim_transcript == " start") // ker napravimo premor med govorom moramo upoštevati tudi presledek+1, t.j. " 1"
         {
             socket.emit("left", 1);
         };
@@ -194,7 +194,7 @@ function startButton(event) {
     return;
   }
   final_transcript = '';
-  recognition.lang = "en-US"; // determine language
+  recognition.lang = "ru-RU"; // determine language
   recognition.start();
   ignore_onend = false;
   final_span.innerHTML = '';
